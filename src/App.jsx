@@ -16,6 +16,7 @@ import BackToTop from "./components/BackToTop";
 import ScrollProgress from "./components/ScrollProgress";
 import SEO from "./components/SEO";
 import Dock from "./components/Dock";
+import ErrorBoundary from "./components/ErrorBoundary";
 import { VscHome, VscArchive, VscAccount, VscSettingsGear } from 'react-icons/vsc';
 
 import { AnimatePresence } from "framer-motion";
@@ -71,7 +72,9 @@ export default function App() {
       </AnimatePresence>
 
       <div className={`transition-opacity duration-1000 ${loading ? 'opacity-0' : 'opacity-100'}`}>
-        <Scene />
+        <ErrorBoundary fallback={null}>
+          <Scene />
+        </ErrorBoundary>
         <Navbar />
         
         <main className="relative z-10">
