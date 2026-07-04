@@ -38,7 +38,7 @@ export default function Navbar() {
           ))}
         </ul>
         <motion.a
-          href="/resume.pdf"
+          href={`${import.meta.env.BASE_URL}resume.pdf`}
           download
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/resume.pdf"
+            href={`${import.meta.env.BASE_URL}resume.pdf`}
             download
             onClick={() => setIsOpen(false)}
             className="mt-2 px-8 py-3 border border-blue-500/50 text-blue-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 rounded-full text-sm tracking-widest uppercase font-semibold transition-all shadow-[0_0_15px_rgba(37,99,235,0.15)]"

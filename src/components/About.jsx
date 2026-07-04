@@ -36,7 +36,7 @@ export default function About() {
             handle="jeshiko"
             status="Online"
             contactText="Hire Me"
-            avatarUrl="/profile.jpg"
+            avatarUrl={`${import.meta.env.BASE_URL}profile.jpg`}
             showUserInfo={true}
             enableTilt={true}
           />

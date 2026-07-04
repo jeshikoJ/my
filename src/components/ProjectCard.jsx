@@ -2,6 +2,10 @@ import { motion } from "framer-motion";
 import GlareHover from "./GlareHover";
 
 export default function ProjectCard({ project, index }) {
+  const imageSrc = project.image && project.image.startsWith('/') 
+    ? `${import.meta.env.BASE_URL}${project.image.slice(1)}` 
+    : project.image;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -20,7 +24,7 @@ export default function ProjectCard({ project, index }) {
       >
       <div className="aspect-video w-full overflow-hidden">
         {project.image ? (
-          <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          <img src={imageSrc} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
         ) : (
           <div className="w-full h-full bg-blue-900/20 flex items-center justify-center">
             <span className="text-blue-500 font-bold uppercase tracking-widest text-xl">Preview</span>

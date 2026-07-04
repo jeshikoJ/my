@@ -34,7 +34,7 @@ export default function Hero() {
           View Projects
         </button>
         <a 
-          href="/resume.pdf" 
+          href={`${import.meta.env.BASE_URL}resume.pdf`} 
           download
           className="px-8 py-4 bg-transparent border border-blue-500/50 hover:bg-blue-600/10 text-blue-400 font-semibold tracking-wider uppercase transition-all hover:scale-105 active:scale-95 rounded-full"
         >
