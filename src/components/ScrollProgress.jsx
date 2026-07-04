@@ -1,0 +1,1 @@
+export default function ScrollProgress(){return <div className='fixed top-0 left-0 h-1 bg-blue-500'/>}
